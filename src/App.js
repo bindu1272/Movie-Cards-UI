@@ -131,16 +131,17 @@ function App() {
                 >
                   {data?.title}
                 </div>
-                {/* <div >{data?.desc}</div> */}
-                {/* {data?.rating?.map((rate) => {
-                 return  ( */}
+                <div className="card-description"
+                style={{ 
+                  color: displayBackground(data)?.color,
+                 }}
+                >{data?.desc}</div>
                 <Rate
                   style={{ color: "white" }}
                   allowHalf
                   defaultValue={ratingCalculator(data?.rating)}
                 />
 
-                {/* <button>Click me!</button> */}
               </div>
             );
           }
